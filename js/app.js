@@ -7,7 +7,7 @@
 // --- 1. DEFAULT CONFIGURATION SYSTEM ---
 const DEFAULT_CONFIG = {
     name: "Shriyukth",
-    birthDate: "2025-09-18",
+    birthDate: "2024-12-20",
     birthTime: "08:30",
     birthWeight: "3.4",
     currentWeight: "7.8",
@@ -24,6 +24,11 @@ function initConfig() {
     const savedConfig = localStorage.getItem("shriyukth_baby_config");
     if (savedConfig) {
         babyConfig = JSON.parse(savedConfig);
+        // If the cached birthdate was the previous default placeholder, force update it to the actual birthday!
+        if (babyConfig.birthDate === "2025-09-18") {
+            babyConfig.birthDate = "2024-12-20";
+            localStorage.setItem("shriyukth_baby_config", JSON.stringify(babyConfig));
+        }
     } else {
         babyConfig = { ...DEFAULT_CONFIG };
         localStorage.setItem("shriyukth_baby_config", JSON.stringify(babyConfig));
