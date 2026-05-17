@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shriyukth's Little World | Official Baby Profile</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Welcome to Shriyukth's magical little world! Follow his milestones, growth, memory gallery, and leave a sweet wish in the interactive wishing well.">
+    <meta name="keywords" content="Shriyukth, baby website, baby milestone, growth tracker, baby memory book, interactive guestbook">
+    <meta name="author" content="Shriyukth's Parents">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Floating Background Elements for Premium Parallax Dreamy Vibe -->
+    <div class="dreamy-background-objects">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+        <div class="star-particle star-1"></div>
+        <div class="star-particle star-2"></div>
+        <div class="star-particle star-3"></div>
+        <div class="star-particle star-4"></div>
+        <div class="star-particle star-5"></div>
+        <div class="balloon-drift balloon-red"></div>
+        <div class="balloon-drift balloon-gold"></div>
+    </div>
+
+    <!-- Navigation Header with Parents Quick Settings -->
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-emoji">🎈</span> Shriyukth's World
+        </div>
+        <nav class="nav-links">
+            <a href="#about" class="nav-item">About Me</a>
+            <a href="#timeline" class="nav-item">Milestones</a>
+            <a href="#gallery" class="nav-item">Memories</a>
+            <a href="#stats" class="nav-item">Growth</a>
+            <a href="#guestbook" class="nav-item">Wishing Well</a>
+        </nav>
+        <button id="settings-btn" class="settings-btn" title="Customize Baby Details">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main class="page-container">
+
+        <!-- HERO SECTION: Age Ticker & Hot Air Balloon -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="baby-badge">✨ Born with Love ✨</div>
+                <h1 class="hero-title">Hello! I'm <span class="highlight" id="baby-name-display">Shriyukth</span></h1>
+                <p class="hero-subtitle">Welcome to my digital playground. Here is how long I have been spreading joy:</p>
+                
+                <!-- Live High-Fidelity Age Ticker -->
+                <div class="age-ticker-container">
+                    <div class="age-card">
+                        <span class="age-num" id="age-years">00</span>
+                        <span class="age-label">Years</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="age-num" id="age-months">00</span>
+                        <span class="age-label">Months</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="age-num" id="age-days">00</span>
+                        <span class="age-label">Days</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="age-num" id="age-hours">00</span>
+                        <span class="age-label">Hours</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="age-num" id="age-minutes">00</span>
+                        <span class="age-label">Mins</span>
+                    </div>
+                    <div class="age-card seconds-card">
+                        <span class="age-num" id="age-seconds">00</span>
+                        <span class="age-label">Secs</span>
+                    </div>
+                </div>
+
+                <div class="birth-details-ribbon">
+                    <div class="ribbon-item">
+                        <span class="ribbon-icon">📅</span>
+                        <span class="ribbon-text" id="birth-date-display">September 18, 2025</span>
+                    </div>
+                    <div class="ribbon-item">
+                        <span class="ribbon-icon">⏰</span>
+                        <span class="ribbon-text" id="birth-time-display">08:30 AM</span>
+                    </div>
+                    <div class="ribbon-item">
+                        <span class="ribbon-icon">⚖️</span>
+                        <span class="ribbon-text" id="birth-weight-display">3.4 kg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-graphic">
+                <div class="scene-container">
+                    <!-- Hot Air Balloon that floats -->
+                    <div class="hot-air-balloon-wrapper">
+                        <div class="hot-air-balloon">
+                            <div class="balloon-body">
+                                <div class="stripe stripe-1"></div>
+                                <div class="stripe stripe-2"></div>
+                                <div class="stripe stripe-3"></div>
+                            </div>
+                            <div class="balloon-ropes"></div>
+                            <div class="balloon-basket">
+                                <span class="baby-basket-emoji">👶</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-basket-clouds">
+                        <div class="basket-cloud basket-cloud-left"></div>
+                        <div class="basket-cloud basket-cloud-right"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </a>
+        </section>
+
+        <!-- ABOUT ME SECTION: Fun Introduction -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-divider">🎈 🧸 🍼</div>
+            </div>
+            <div class="about-container">
+                <div class="about-card intro-card">
+                    <div class="avatar-container">
+                        <!-- Cute illustrated avatar or placeholder for real photo -->
+                        <div class="baby-avatar" id="avatar-frame">
+                            <img id="baby-photo" src="assets/images/shriyukth_baby.png" alt="Shriyukth" class="baby-image-loading" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23ffd8d8%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>👶</text></svg>'">
+                            <div class="avatar-glow"></div>
+                        </div>
+                    </div>
+                    <div class="intro-speech">
+                        <p class="speech-bubble">"Hi there! I am Shriyukth. I love listening to sweet music, babbling with my toys, exploring the house on all fours, and wiggling my toes. I make my mom and dad laugh with my funny baby sounds and silly smiles! Thank you for visiting my little corner of the internet!"</p>
+                    </div>
+                </div>
+
+                <div class="about-card facts-card">
+                    <h3 class="card-subtitle">Fun Little Facts</h3>
+                    <ul class="fun-facts-list">
+                        <li>
+                            <span class="fact-icon">🌟</span>
+                            <div class="fact-content">
+                                <strong>My Zodiac Sign:</strong>
+                                <span id="zodiac-display">Virgo (The Helper)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="fact-icon">🎵</span>
+                            <div class="fact-content">
+                                <strong>Favorite Sound:</strong>
+                                <span id="fav-sound-display">Soft rustling paper & lullabies</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="fact-icon">🍼</span>
+                            <div class="fact-content">
+                                <strong>Current Favorite Snack:</strong>
+                                <span id="fav-food-display">Mashed bananas & sweet applesauce</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="fact-icon">🧸</span>
+                            <div class="fact-content">
+                                <strong>My Best Buddy:</strong>
+                                <span id="fav-toy-display">Mr. Squeaky the Plush Giraffe</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="fact-icon">💤</span>
+                            <div class="fact-content">
+                                <strong>Superpower:</strong>
+                                <span id="superpower-display">Sleeping in funny pretzel shapes!</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- MILESTONES TIMELINE SECTION: Dream Road Map -->
+        <section id="timeline" class="timeline-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Milestone Roadmap</h2>
+                <div class="section-divider">⭐ ⭐ ⭐</div>
+                <p class="section-description">A journey of tiny steps that fill our hearts with giant leaps of love.</p>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Timeline vertical track line -->
+                <div class="timeline-line"></div>
+
+                <!-- Milestone 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-bullet">🍼</div>
+                    <div class="timeline-card">
+                        <div class="milestone-date">September 18, 2025</div>
+                        <h3 class="milestone-title">Hello World!</h3>
+                        <p class="milestone-desc">I was born and made the world a much brighter place! First time meeting mommy and daddy.</p>
+                        <span class="milestone-badge">Day 1</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-bullet">😊</div>
+                    <div class="timeline-card">
+                        <div class="milestone-date">November 2, 2025</div>
+                        <h3 class="milestone-title">First Social Smile</h3>
+                        <p class="milestone-desc">I looked straight at mommy, cooed softly, and gave her the sweetest, most heart-melting smile ever.</p>
+                        <span class="milestone-badge">6 Weeks</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-bullet">💤</div>
+                    <div class="timeline-card">
+                        <div class="milestone-date">December 25, 2025</div>
+                        <h3 class="milestone-title">Sleeping Through the Night</h3>
+                        <p class="milestone-desc">The absolute best Christmas gift! I slept 8 hours straight and let mommy and daddy catch up on dreams.</p>
+                        <span class="milestone-badge">3 Months</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-bullet">👶</div>
+                    <div class="timeline-card">
+                        <div class="milestone-date">March 18, 2026</div>
+                        <h3 class="milestone-title">Sitting Like a Champ</h3>
+                        <p class="milestone-desc">Look, no hands! I can sit up straight all by myself now, which makes playing with my soft blocks ten times cooler.</p>
+                        <span class="milestone-badge">6 Months</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-bullet">🚗</div>
+                    <div class="timeline-card">
+                        <div class="milestone-date">May 5, 2026</div>
+                        <h3 class="milestone-title">On the Move (Crawling!)</h3>
+                        <p class="milestone-desc">I figured out how to push off! Now I crawl around like a little turtle, exploring every corner of the carpet.</p>
+                        <span class="milestone-badge">7.5 Months</span>
+                    </div>
+                </div>
+
+                <!-- Milestone 6 -->
+                <div class="timeline-item right future-milestone">
+                    <div class="timeline-bullet">🚶</div>
+                    <div class="timeline-card">
+                        <div class="milestone-date">Coming Soon</div>
+                        <h3 class="milestone-title">First Standing & Steps</h3>
+                        <p class="milestone-desc">Mommy and daddy are holding my hands, and I'm balance-building for my big standing debut!</p>
+                        <span class="milestone-badge">Next Up</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHOTO MEMORY GALLERY SECTION: Polaroids -->
+        <section id="gallery" class="gallery-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Memory Polaroid Board</h2>
+                <div class="section-divider">📷 🎨 ✨</div>
+                <p class="section-description">A collection of sweet memories caught on camera.</p>
+            </div>
+
+            <!-- Polaroid Category Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Smiles</button>
+                <button class="filter-btn" data-filter="newborn">Newborn Days</button>
+                <button class="filter-btn" data-filter="play">Playtime</button>
+                <button class="filter-btn" data-filter="family">With Family</button>
+            </div>
+
+            <!-- Polaroid Masonry Wall -->
+            <div class="polaroid-grid" id="polaroid-grid">
+                <!-- Polaroid 1 -->
+                <div class="polaroid-item show" data-category="newborn" style="--rotation: -3deg;">
+                    <div class="polaroid-card">
+                        <div class="polaroid-photo-wrapper">
+                            <img src="assets/images/polaroid_1.png" alt="Sweet sleepy newborn" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2ece9%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>😴</text></svg>'">
+                        </div>
+                        <div class="polaroid-caption">Fresh out of dreamland! ☁️</div>
+                    </div>
+                </div>
+
+                <!-- Polaroid 2 -->
+                <div class="polaroid-item show" data-category="play" style="--rotation: 4deg;">
+                    <div class="polaroid-card">
+                        <div class="polaroid-photo-wrapper">
+                            <img src="assets/images/polaroid_2.png" alt="Playing on playmat" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23fcf6bd%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>🧸</text></svg>'">
+                        </div>
+                        <div class="polaroid-caption">My soft blocks are delicious. 🧱</div>
+                    </div>
+                </div>
+
+                <!-- Polaroid 3 -->
+                <div class="polaroid-item show" data-category="family" style="--rotation: -2deg;">
+                    <div class="polaroid-card">
+                        <div class="polaroid-photo-wrapper">
+                            <img src="assets/images/polaroid_3.png" alt="Shriyukth with mommy and daddy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23d0f4de%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>👪</text></svg>'">
+                        </div>
+                        <div class="polaroid-caption">Mommy & Daddy hug sandwich! 🥪</div>
+                    </div>
+                </div>
+
+                <!-- Polaroid 4 -->
+                <div class="polaroid-item show" data-category="newborn" style="--rotation: 3deg;">
+                    <div class="polaroid-card">
+                        <div class="polaroid-photo-wrapper">
+                            <img src="assets/images/polaroid_4.png" alt="First bath smile" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23a9def9%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>🛁</text></svg>'">
+                        </div>
+                        <div class="polaroid-caption">Bath time bubble explorer! 🫧</div>
+                    </div>
+                </div>
+
+                <!-- Polaroid 5 -->
+                <div class="polaroid-item show" data-category="play" style="--rotation: -4deg;">
+                    <div class="polaroid-card">
+                        <div class="polaroid-photo-wrapper">
+                            <img src="assets/images/polaroid_5.png" alt="Funny tummy time face" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e4c1f9%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>🦖</text></svg>'">
+                        </div>
+                        <div class="polaroid-caption">Tummy time muscle workout! 💪</div>
+                    </div>
+                </div>
+
+                <!-- Polaroid 6 -->
+                <div class="polaroid-item show" data-category="family" style="--rotation: 2deg;">
+                    <div class="polaroid-card">
+                        <div class="polaroid-photo-wrapper">
+                            <img src="assets/images/polaroid_6.png" alt="Grandparents visit" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22 viewBox=%220 0 100 100%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23ffd6ff%22/><text x=%2250%22 y=%2255%22 font-family=%22sans-serif%22 font-size=%2240%22 text-anchor=%22middle%22>👵</text></svg>'">
+                        </div>
+                        <div class="polaroid-caption">Spoiled rotten by grandfolks! 🍬</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS & CURRENT METRICS SECTION -->
+        <section id="stats" class="stats-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Growth Dashboard</h2>
+                <div class="section-divider">📈 🥛 👣</div>
+                <p class="section-description">Watching me grow day by day, centimeter by centimeter.</p>
+            </div>
+
+            <div class="stats-grid">
+                <!-- Weight Card -->
+                <div class="stats-card">
+                    <div class="card-icon-circle bg-peach">⚖️</div>
+                    <h3 class="stats-card-title">Weight Log</h3>
+                    <div class="stats-large-num" id="display-weight">7.8 <span class="stats-unit">kg</span></div>
+                    <p class="stats-growth-diff" id="diff-weight">+4.4 kg since birth</p>
+                    <div class="stats-footer">Last updated: Today</div>
+                </div>
+
+                <!-- Height Card -->
+                <div class="stats-card">
+                    <div class="card-icon-circle bg-blue">📏</div>
+                    <h3 class="stats-card-title">Height Log</h3>
+                    <div class="stats-large-num" id="display-height">68 <span class="stats-unit">cm</span></div>
+                    <p class="stats-growth-diff" id="diff-height">+17 cm since birth</p>
+                    <div class="stats-footer">Last updated: Today</div>
+                </div>
+
+                <!-- Sleep Card -->
+                <div class="stats-card">
+                    <div class="card-icon-circle bg-mint">💤</div>
+                    <h3 class="stats-card-title">Sleep Cycle</h3>
+                    <div class="stats-large-num">14 <span class="stats-unit">hrs</span></div>
+                    <p class="stats-growth-diff">11h night + 3h naps</p>
+                    <div class="stats-footer">Dream level: Maximum 🌟</div>
+                </div>
+
+                <!-- Milestones Completed Card -->
+                <div class="stats-card">
+                    <div class="card-icon-circle bg-yellow">🏆</div>
+                    <h3 class="stats-card-title">Milestones Unlocked</h3>
+                    <div class="stats-large-num" id="unlocked-count">5 / 6</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 83.3%;"></div>
+                    </div>
+                    <p class="stats-growth-diff">Leveling up fast!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUESTBOOK WISHING WELL SECTION -->
+        <section id="guestbook" class="guestbook-section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">The Interactive Wishing Well</h2>
+                <div class="section-divider">🧚 💫 💌</div>
+                <p class="section-description">Drop a sweet wish, a blessing, or a happy note for Shriyukth. We will save it in his digital baby book forever!</p>
+            </div>
+
+            <div class="guestbook-container">
+                <!-- Left: Interactive Sticky Note Form -->
+                <div class="wish-form-wrapper">
+                    <div class="wish-form-card" id="form-card">
+                        <h3 class="form-title">Cast a Blessing</h3>
+                        
+                        <form id="wishing-well-form">
+                            <div class="form-group">
+                                <label for="wish-author">Your Name / Relationship</label>
+                                <input type="text" id="wish-author" placeholder="e.g. Aunt Sarah, Grandma, Daddy's Friend" required maxlength="30">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="wish-text">Your Blessing / Message</label>
+                                <textarea id="wish-text" rows="4" placeholder="May your life be filled with laughter, tiny explorer..." required maxlength="250"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pick Paper Theme</label>
+                                <div class="color-picker-grid">
+                                    <button type="button" class="color-dot active bg-pastel-pink" data-color="pink" title="Dream Pink"></button>
+                                    <button type="button" class="color-dot bg-pastel-blue" data-color="blue" title="Sky Blue"></button>
+                                    <button type="button" class="color-dot bg-pastel-yellow" data-color="yellow" title="Sun Gold"></button>
+                                    <button type="button" class="color-dot bg-pastel-green" data-color="green" title="Mint Forest"></button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pick a Stamp Icon</label>
+                                <div class="stamp-picker-grid">
+                                    <button type="button" class="stamp-btn active" data-stamp="🧸">🧸</button>
+                                    <button type="button" class="stamp-btn" data-stamp="⭐">⭐</button>
+                                    <button type="button" class="stamp-btn" data-stamp="🎈">🎈</button>
+                                    <button type="button" class="stamp-btn" data-stamp="🤍">🤍</button>
+                                    <button type="button" class="stamp-btn" data-stamp="🍼">🍼</button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-wish-btn">
+                                <span>Cast Wish Into Well ✨</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right: Wishing Wall (Sticky Note Hanging Canvas) -->
+                <div class="wishing-wall-wrapper">
+                    <div class="wishing-wall-header">
+                        <span>🌟 Guestbook Blessings Wall</span>
+                        <button id="clear-wishes-btn" class="clear-btn" title="Reset guestbook board (Local)">Reset Board</button>
+                    </div>
+                    <div class="wishing-wall-board" id="wishes-board">
+                        <!-- Wishes will be dynamically populated here via Javascript -->
+                        <div class="wishes-empty-state" id="wishes-empty">
+                            <span class="empty-emoji">🕊️</span>
+                            <p>No wishes cast yet. Be the first to hang a blessing card!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIME CAPSULE SECTION: 18th Birthday Letters -->
+        <section id="time-capsule" class="capsule-section scroll-reveal">
+            <div class="capsule-card">
+                <div class="capsule-badge">⏳ Time Capsule 2043 ⏳</div>
+                <h2 class="capsule-title">Write a Letter to 18-Year-Old Shriyukth</h2>
+                <p class="capsule-description">Have a deeper piece of advice, a funny memory from today, or a secret prophecy? Seal a letter into our digital vault. We won't let Shriyukth unlock these letters until his 18th birthday!</p>
+                
+                <form id="time-capsule-form" class="capsule-form">
+                    <div class="capsule-input-row">
+                        <input type="text" id="capsule-sender" placeholder="Your Name" required>
+                        <input type="email" id="capsule-email" placeholder="Your Email Address" required>
+                    </div>
+                    <textarea id="capsule-letter" rows="5" placeholder="Dear Shriyukth, today you are still small, but when you open this, you will be a man..." required></textarea>
+                    <button type="submit" class="capsule-submit-btn">Seal in Time Capsule 🔒</button>
+                </form>
+
+                <!-- Sealed Envelope Success Overlay -->
+                <div class="capsule-success-overlay" id="capsule-success">
+                    <div class="success-content">
+                        <div class="envelope-animation">
+                            <div class="envelope-back"></div>
+                            <div class="envelope-letter"></div>
+                            <div class="envelope-front"></div>
+                            <div class="envelope-seal">🏆</div>
+                        </div>
+                        <h3 class="success-heading">Letter Sealed Successfully!</h3>
+                        <p class="success-message">Your message has been locked in Shriyukth's 2043 Time Capsule. A verification lock has been sent to your email.</p>
+                        <button type="button" id="capsule-reset-btn" class="success-close-btn">Write Another</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-decor">☁️ 🎈 🧸 🍼 ☁️</div>
+        <p class="footer-text">&copy; 2026 Crafted with deep love by Shriyukth's Parents.</p>
+        <p class="footer-subtext">shriyukth.com &bull; Celebrating the adventure of growth</p>
+    </footer>
+
+    <!-- PARENTS CONFIGURATION MODAL (Secret Gear Panel) -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <h2 class="modal-title">🔧 Parents Customize Panel</h2>
+            <p class="modal-desc">Adjust Shriyukth's profile parameters instantly. Changes save to this browser's database (`localStorage`).</p>
+            
+            <form id="settings-form">
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="cfg-name">Baby's Display Name</label>
+                        <input type="text" id="cfg-name" value="Shriyukth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cfg-birth-weight">Birth Weight (kg)</label>
+                        <input type="text" id="cfg-birth-weight" value="3.4" required>
+                    </div>
+                </div>
+                
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="cfg-birth-date">Birth Date</label>
+                        <input type="date" id="cfg-birth-date" value="2025-09-18" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cfg-birth-time">Birth Time</label>
+                        <input type="time" id="cfg-birth-time" value="08:30" required>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="cfg-weight">Current Weight (kg)</label>
+                        <input type="number" step="0.1" id="cfg-weight" value="7.8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cfg-height">Current Height (cm)</label>
+                        <input type="number" step="0.5" id="cfg-height" value="68.0" required>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="cfg-toy">Favorite Toy</label>
+                        <input type="text" id="cfg-toy" value="Mr. Squeaky the Plush Giraffe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cfg-food">Favorite Snack</label>
+                        <input type="text" id="cfg-food" value="Mashed bananas & sweet applesauce" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cfg-superpower">Superpower</label>
+                    <input type="text" id="cfg-superpower" value="Sleeping in funny pretzel shapes!" required>
+                </div>
+
+                <button type="submit" class="settings-save-btn">Save Configuration & Refresh</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PHOTO LIGHTBOX MODAL -->
+    <div class="modal-overlay" id="lightbox-modal">
+        <div class="lightbox-card">
+            <button class="modal-close lightbox-close" id="lightbox-close-btn">&times;</button>
+            <div class="lightbox-img-wrapper">
+                <img id="lightbox-img" src="" alt="Zoomed Photo">
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption">Photo Caption</div>
+        </div>
+    </div>
+
+    <!-- FLOATING CALMING MUSIC BOX CONTROLLER -->
+    <div class="music-box-widget" id="music-widget">
+        <div class="music-visualizer" id="music-visualizer">
+            <div class="visual-bar bar-1"></div>
+            <div class="visual-bar bar-2"></div>
+            <div class="visual-bar bar-3"></div>
+            <div class="visual-bar bar-4"></div>
+        </div>
+        <button class="music-play-btn" id="music-toggle-btn" aria-label="Play Calming Lullaby Music Box">
+            <span class="music-icon-state" id="music-icon">🎵</span>
+        </button>
+        <div class="music-bubble" id="music-bubble">
+            <div class="bubble-text">Play Lullaby Music Box 🧸</div>
+        </div>
+    </div>
+
+    <!-- Modular Application JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
