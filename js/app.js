@@ -363,13 +363,20 @@ let wishes = [];
 
 function loadWishes() {
     const savedWishes = localStorage.getItem("shriyukth_wishes");
+    let needsReset = false;
     if (savedWishes) {
         wishes = JSON.parse(savedWishes);
-    } else {
+        // Reset cache if it contains the previous placeholder data
+        if (wishes.length > 0 && wishes.some(w => w.author === "Grandma Helen" || w.author === "Uncle Neil")) {
+            needsReset = true;
+        }
+    }
+    
+    if (!savedWishes || needsReset) {
         wishes = [
-            { id: 1, author: "Grandma Helen", text: "Growing so fast, our sweet angel boy! Praying for a lifetime of health, laughter, and magical dreams.", color: "pink", stamp: "🧸", rotation: -4 },
-            { id: 2, author: "Uncle Neil", text: "Can't wait to play soccer with you on the lawn! Keep growing big and strong, little buddy.", color: "blue", stamp: "🎈", rotation: 5 },
-            { id: 3, author: "Auntie Kiara", text: "Your tiny giggles represent absolute sunshine. Sending you all the tightest cuddles, little baby prince!", color: "yellow", stamp: "⭐", rotation: -2 }
+            { id: 1, author: "Mommy Girija & Daddy Sunil", text: "Our little miracle Shriyukth, you brought pure heaven into our lives! Keep smiling and shining, our sweet angel boy.", color: "pink", stamp: "🤍", rotation: -4 },
+            { id: 2, author: "Grandma Mamatha, Santha & Grandpa Ramana", text: "Blessings and infinite love to our precious grandson. May you grow wise, healthy, and always touch the stars!", color: "yellow", stamp: "⭐", rotation: 4 },
+            { id: 3, author: "Aunty Manasa, Uncle Darshan & Sudarshan", text: "To our favorite little explorer! We can't wait to watch you take your big steps and go on adventures together.", color: "blue", stamp: "🎈", rotation: -2 }
         ];
         localStorage.setItem("shriyukth_wishes", JSON.stringify(wishes));
     }
